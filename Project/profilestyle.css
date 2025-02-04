@@ -1,0 +1,325 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body{
+    background-image: url("image/BBG-home.jpeg");
+    background-size: cover;
+    background-attachment: fixed;  
+    background-repeat: no-repeat;  
+}
+
+/*user profile*/
+.content{
+    background-color:rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    margin-top: 80px;
+    max-width: 1200px;
+}
+
+.user-content{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.UserImg img{
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+  
+.header-info{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.change-info{
+    border-radius: 10px;
+    padding: 2px 8px 2px 8px;
+    font-size: 10px;
+    border: 0px;
+    align-items: center;
+}
+
+.edit-icon{
+    height: 8px;
+    width: 8px;
+}
+  
+.card{
+    background-color: white;
+    padding: 20px;
+    min-width: 600px;
+}
+
+.card-text{
+    font-size: 14px;
+}
+
+.topic-header{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+/*Edit form*/
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* สีพื้นหลังแบบโปร่งแสง */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* ให้อยู่ด้านบนสุด */
+}
+
+#popup-form {
+    background: #fff; /* สีพื้นหลังของฟอร์ม */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%; /* รองรับหน้าจอขนาดเล็ก */
+}
+
+#popup-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#popup-form input, #popup-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#popup-form button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popup-form button[type="button"] {
+    background: #6c757d;
+}
+
+/*Favorite list*/
+
+.fav-card {
+    display: inline-flex;
+    flex-direction: column;
+    border-radius: 10px;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 10px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    transition: opacity 0.3s ease; /* ทำให้การเปลี่ยนความโปร่งใสลื่นไหล */
+}
+
+.fav-card img{
+    max-width: 200px;
+    max-height: 150px;
+    margin-bottom: 5px;
+}
+
+.fav-card h6{
+    padding: 5px;
+    font-size: 14px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+}
+
+.emp-fav{
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 200px;
+    max-height: 200px;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.fav-card {
+    position: relative;
+    transition: opacity 0.3s ease; /* ทำให้การเปลี่ยนความโปร่งใสลื่นไหล */
+}
+
+.fav-card.dimmed {
+    opacity: 0.8; /* ปรับความจาง */
+}
+
+.fav-card .delete-fav-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2; /* ให้อยู่เหนือการ์ด */
+    display: none; /* เริ่มต้นซ่อน */
+}
+
+.fav-card.dimmed .delete-fav-btnn {
+    display: block; /* แสดงปุ่มเมื่อการ์ดจาง */
+    opacity: 1; /* ปุ่มยังคงชัดเจน */
+}
+
+.fav-card:hover .delete-fav-btn {
+    display: block;
+}
+
+.fav-card .delete-fav-btn img{
+    width: 20px;
+    height: 20px;
+    align-content: center;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+}
+
+.popup-content h5{
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    z-index: 10;
+    background: none; 
+    border: none; 
+}
+
+.favorite-container {
+    display: flex; /* ใช้ Flexbox สำหรับการจัดวาง */
+    align-items: flex-start; /* ชิดด้านบน */
+    flex-wrap: wrap; /* ให้ไหลลงบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+}
+
+.favorite-container .fav-card{
+    text-align: center;
+}
+
+.favorite-container .fav-card h7{
+    padding: 20px;
+    border-bottom: 0.5px solid #d3d3d3;
+}
+
+.details-btn{
+    background-color: white;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Responsive Design สำหรับ Mobile */
+@media only screen and (max-width: 768px) {
+    .content {
+        padding: 20px; /* ลด padding เพื่อลดพื้นที่ */
+        max-width: 100%; /* ขยายเต็มหน้าจอ */
+    }
+
+    .user-content {
+        flex-direction: column; /* จัดเรียงแนวตั้ง */
+    }
+
+    .UserImg{
+        align-items: center;
+    }
+
+    .UserImg img {
+        display: block;
+        margin: 0 auto; /* จัดรูปภาพให้อยู่กึ่งกลาง */
+        max-width: 250px; /* กำหนดขนาดรูป */
+        max-height: 250px;
+    }
+
+    .card {
+        min-width: auto; /* ให้ขนาดการ์ดยืดหยุ่น */
+        width: 100%; /* เต็มความกว้างของจอ */
+        padding: 10px; /* ลด padding ภายในการ์ด */
+    }
+
+    .fav-card{
+        max-width: 100%;
+    }
+
+    .user-fav .fav-card {
+        width: fit-content; /* ขนาดพอดีกับเนื้อหา */
+        max-width: 180px; /* ไม่ให้การ์ดเกินความกว้างจอ */
+        margin: 10px auto; /* จัดให้อยู่กึ่งกลางและเพิ่ม margin */
+        overflow: hidden; 
+    }
+
+    .user-fav .fav-card img {
+        width: 180px; /* Fix ความกว้างรูป */
+        height: 120px; /* Fix ความสูงรูป */
+        object-fit: cover; /* รักษาอัตราส่วนรูปและครอบให้เต็มขนาด */
+    }
+
+    .user-fav .fav-card h6 {
+        font-size: 14px;
+        overflow: hidden; 
+        white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
+        text-overflow: ellipsis; /* ใช้ ... เมื่อข้อความยาวเกิน */
+        word-wrap: break-word;
+    }
+
+    .favorite-container {
+        flex-direction: column; /* การ์ดจัดเรียงในแนวตั้ง */
+        align-items: center; /* จัดกึ่งกลางการ์ด */
+    }
+
+    .delete-fav-btn img{
+        width: 20px !important;
+        height: 20px !important;
+    }
+}

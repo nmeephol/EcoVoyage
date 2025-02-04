@@ -1,0 +1,721 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+.general-body{
+    background-image: url("image/BGG-loginpage.png");
+    background-size: cover;
+    background-attachment: fixed;  
+    background-repeat: no-repeat;  
+}
+
+h1{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 360%;
+    color: #0c2c18;
+}
+
+.login-page {
+  width: 400px;
+  padding: 12% 0 0;
+  margin: auto;
+}
+.register-page {
+  width: 400px;
+  padding: 4% 0 0;
+  margin: auto;
+}
+
+.login-page .form{
+  background-color: rgb(255, 255, 255, 0.9);
+  position:absolute;
+  z-index: 1;
+  max-width: 400px;
+  margin: 0 auto px;
+  padding: 45px;
+  position: absolute;
+  left: 67%;
+}
+
+.register-page .form{
+    background-color: rgb(255, 255, 255, 0.9);
+    position:absolute;
+    z-index: 1;
+    max-width: 390px;
+    margin: 0 auto px;
+    padding: 45px;
+    position: absolute;
+    left: 68%;
+}
+
+.form input {
+
+  font-family: "Roboto", sans-serif;
+  border-radius: 30px;
+  outline: 0;
+  background:  rgb(255, 255, 255);
+  width: 100%;
+  border: 1;
+  margin: 0 0 15px;
+  padding: 13px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  outline: 0;
+  border-radius: 30px;
+  background: #0c2c18;
+  width: 60%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.form button:hover,.form button:active,.form button:focus {
+  background: #397d54;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: rgb(63, 63, 63);
+  font-size: 14px;
+}
+.form .message a {
+  color: #0d371d;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+.message{
+  text-align: center;
+}
+
+.form .message-start {
+  margin: 15px 0 0;
+  font-size: 18px;
+  text-align: center;
+}
+.form .message-start a {
+  color: #0d371d;
+}
+
+.select-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 100px;
+  height: 50px;
+  border: 1px;
+  border-color: #1a1a1a;
+}
+
+.select-box{
+    border-radius: 30px;
+    font-family: "Roboto", sans-serif;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width: 100%;
+    color: rgb(114, 113, 113);
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.bodyhomepage{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("image/BBG-home.jpeg");
+  background-size: cover;
+  background-attachment: fixed;  
+  background-repeat: no-repeat;  
+}
+
+/*แถบด้านบน*/
+.navbar{
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* สีพื้นหลัง */
+  padding: 10px 40px;
+  z-index: 1000;
+}
+.navbar .logo {
+  font-size: 30px;
+  font-style: "Roboto", sans-serif;
+  color: #0c2c18; /* สีเขียวของโลโก้ */
+  text-shadow: 1px 1px #a1a4a1;
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar .user-icon {
+  font-size: 60px;
+  color: #2b602b;
+  cursor: pointer;
+}
+.loginOrRegist{
+  color: #2b602b;
+  text-align: right;
+
+}
+/*test connect to profile.php*/
+.navbar .UserIcon{
+  height: 30px;
+  width: 30px;
+}
+
+@media (max-width: 768px) {
+.navbar {
+      padding: 10px;
+  }
+}
+
+/* สำหรับหน้า Homepage*/
+.welcomemessage{
+  font-size: 50px;
+  font-style: "Roboto", sans-serif;
+  color: #FFFFFF;
+  padding: 120px;
+  text-align: left;
+  font-weight: 1000;
+}     
+.rectanglebotton{
+  width: calc(33vw - 13px);
+  height: 80vh; 
+  font-size: 12px;
+  background-color: #ffffffe1; /* สีพื้นหลังสี่เหลี่ยม */
+  position: absolute; /* ใช้ตำแหน่งแบบ absolute */
+  top: 100px; /* ระยะจากด้านบน */
+  right: 60px; /* ระยะจากด้านขวา */
+  display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่งปุ่ม */
+  flex-wrap: wrap; /* ให้ปุ่มเรียงเป็นแถว */
+  justify-content: center; /* จัดตำแหน่งปุ่มให้กลางสี่เหลี่ยม */
+  align-items: center; /* จัดตำแหน่งปุ่มให้กลางแนวตั้ง */
+  padding: 20px; /* ช่องว่างรอบๆ ปุ่ม */
+}
+
+.rectanglebotton .p{
+  color: #0c2c18;
+}
+
+.circle-button {
+  width: 9vw; /* เส้นผ่านศูนย์กลาง 40px */
+  height: 9vw; /* เส้นผ่านศูนย์กลาง 40px */
+  background-color: #086d08; /* สีพื้นหลังของปุ่ม */
+  border-radius: 50%; /* ทำให้ปุ่มเป็นวงกลม */
+  border: 2px solid;
+  border-color: #397d54;
+  margin: 25px; /* ช่องว่างระหว่างปุ่ม */
+  cursor: pointer; /* เปลี่ยนรูปแบบของเมาส์เมื่อชี้ไปที่ปุ่ม */
+}
+
+/* รูปในปุ่ม */
+.circle-button img {
+  width: 97%; /* กำหนดให้รูปเต็มพื้นที่ปุ่ม */
+  height: 92%; /* กำหนดให้รูปเต็มพื้นที่ปุ่ม */
+  object-fit: cover; /* ทำให้รูปเต็มพื้นที่โดยไม่ทำให้รูปเบี้ยว */
+}
+
+.rectangleEXplace {
+  width: 100vw;
+  height: 70vh; 
+  background-color: #ffffff; /* สีพื้นหลังสี่เหลี่ยม */
+  position: absolute; /* ใช้ตำแหน่งแบบ absolute */
+  padding: 60px; /* ช่องว่างรอบๆ ปุ่ม */
+  display: flex;
+}
+
+.lum{
+  border: 5px solid white;
+  width: 300px;
+  position: relative;
+  margin-top: -130px;
+}
+
+.lumgroup{
+  text-align: center;
+}
+.bicyclegroup{
+  text-align: center;
+}
+
+.bicycle{
+  border: 5px solid white;
+  width: 250px;
+  position: relative;
+  margin-top: -130px;
+}
+
+.listhomepage{
+  font-style: "Roboto", sans-serif;
+  color: #0d371d;
+}
+
+.HeadEXplace{
+  font-style: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #0c2c18;
+}
+
+.detailEXplace{
+  font-style: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #0c2c18;
+  text-align: left;
+}
+
+/*สำหรับหน้า *planpage*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.bodyplan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("image/BBG-home.jpeg");
+    background-size: cover;
+    background-attachment: fixed;  
+    background-repeat: no-repeat;  
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 50px;
+    margin: 0 16px;
+    background-color: #fffffff3;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    top: 100px;
+}
+.container header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0c2c18;
+}
+
+.container form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 150vh;
+    overflow: hidden;
+}
+.container .planform{
+    position: absolute;
+    transition: 0.3s ease;
+}
+
+.container form .fields{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.planform .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 10px);
+    flex-direction: column;
+    margin: 4px 0;
+    padding: 4%;
+}
+
+.input-field label{
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #0c2c18;
+    text-shadow: #333;
+    font-weight: 500;
+}
+.input-field input, select{
+    outline: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 20px;
+    border: 1px solid #aaa;
+    padding: 0 16px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field select,
+.input-field input[type="date"]{
+    color: #707070;
+}
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+#submit-btn{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: 0;
+    border-radius: 30px;
+    background: #066f2e;
+    width: 20%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    justify-content: center;
+}
+#submit-btn:disabled{
+  background: #3f3f3f;
+  color: #ffffff;
+  cursor: not-allowed;
+}
+
+.Btn{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+}
+
+.container form .btnText{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.planform .buttons{
+    display: flex;
+    align-items: center;
+}
+.planform .buttons button , .backBtn{
+    margin-right: 14px;
+}
+.inde{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: #066f2e;
+    width: 12%;
+    height: 0.5%;
+    border: 0;
+    box-shadow: #1a1a1a;
+    padding: 0px;
+    color: #FFFFFF;
+    font-size: 17px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.numOfday{
+    width: 25%;
+    text-align: center;
+} 
+
+
+/*ส่วนของกิจกรรม*/
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 4%;
+}
+
+.labelact{
+  width: 100%;
+  color: #093a1c;
+  text-shadow: #333;
+}
+
+.labelact1{
+  width: 100%;
+  color: #828989;
+  text-shadow: #504f4f;
+}
+
+.activity-button {
+  width: 155px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  color: #4d4d4d;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-direction: row;
+}
+
+.activity-button.selected {
+  background-color: #ddffe0;
+  border-color: #093a1c;
+  border: 3px solid;
+  color: #0c2c18;
+  font-weight: 500;
+  opacity:1;
+}
+.activity-button.selected .iconact{
+  opacity: 1;
+}
+
+.iconact {
+  max-width: 100%;
+  max-height: 70%;
+  margin-right: 5px;
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+
+/*actionเมื่อหน้าจอหน้า plan เล็กลง*/
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    .planform .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+@media (max-width: 550px) {
+    .planform .fields .input-field{
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+  .login-page .form{
+    background-color: rgb(255, 255, 255, 0.9);
+    position:absolute;
+    z-index: 1;
+    max-width: 400px;
+    margin: 0 auto px;
+    padding: 45px;
+    position: absolute;
+    left: 17%;
+  }
+  .form input {
+    width: 100%;
+    border: 1;
+    margin: 0 0 15px;
+    padding: 13px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+  .register-page .form{
+    background-color: rgb(255, 255, 255, 0.9);
+    position:absolute;
+    z-index: 1;
+    max-width: 390px;
+    margin: 0 auto px;
+    padding: 45px;
+    position: absolute;
+    left: 17%;
+}
+}
+
+.welcomemessage{
+  font-size: 50px;
+  font-style: "Roboto", sans-serif;
+  color: #FFFFFF;
+  padding-top: 12%;
+  padding-left: 13%;
+  text-align: left;
+  font-weight: 1000;
+}     
+.rectanglebotton{
+  width: 400px;
+  height: 630px; 
+  background-color: #ffffffe1; /* สีพื้นหลังสี่เหลี่ยม */
+  position: absolute; /* ใช้ตำแหน่งแบบ absolute */
+  top: 100px; /* ระยะจากด้านบน */
+  right: 80px; /* ระยะจากด้านขวา */
+  border-radius: 10%;
+  display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่งปุ่ม */
+  flex-wrap: wrap; /* ให้ปุ่มเรียงเป็นแถว */
+  align-items: center; /* จัดตำแหน่งปุ่มให้กลางแนวตั้ง */
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.rectanglebotton .p{
+  color: #0c2c18;
+}
+
+.circle-button {
+  width: 140px; /* เส้นผ่านศูนย์กลาง 40px */
+  height: 140px; /* เส้นผ่านศูนย์กลาง 40px */
+  background-color: #086d08; /* สีพื้นหลังของปุ่ม */
+  border-radius: 50%; /* ทำให้ปุ่มเป็นวงกลม */
+  border: 2px solid;
+  border-color: #19191944;
+  margin: 25px; /* ช่องว่างระหว่างปุ่ม */
+  cursor: pointer; /* เปลี่ยนรูปแบบของเมาส์เมื่อชี้ไปที่ปุ่ม */
+}
+
+/* รูปในปุ่ม */
+.circle-button img {
+  width: 97%; /* กำหนดให้รูปเต็มพื้นที่ปุ่ม */
+  height: 95%; /* กำหนดให้รูปเต็มพื้นที่ปุ่ม */
+  object-fit: cover; /* ทำให้รูปเต็มพื้นที่โดยไม่ทำให้รูปเบี้ยว */
+}
+
+.rectangleEXplace {
+  width: 100vw;
+  height: 70vh; 
+  background-color: #ffffff; /* สีพื้นหลังสี่เหลี่ยม */
+  position: absolute; /* ใช้ตำแหน่งแบบ absolute */
+  display: flex;
+  padding-left: 7%;
+  top: 70%;
+}
+
+.lum{
+  border: 5px solid white;
+  width: 300px;
+  position: relative;
+  margin-top: -130px;
+}
+
+.lumgroup{
+  text-align: center;
+}
+.bicyclegroup{
+  text-align: center;
+}
+
+.bicycle{
+  border: 5px solid white;
+  width: 250px;
+  position: relative;
+  margin-top: -130px;
+}
+
+.listhomepage{
+  font-style: "Roboto", sans-serif;
+  color: #0d371d;
+  font-size: 14px;
+}
+
+.HeadEXplace{
+  font-style: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #0c2c18;
+}
+
+.detailEXplace{
+  font-style: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #0c2c18;
+  text-align: left;
+}
+
+@media (max-width: 720px) {
+
+  .rectanglebotton{
+    width: 400px;
+    height: 650px; 
+    background-color: #ffffffe1; /* สีพื้นหลังสี่เหลี่ยม */
+    position: absolute; /* ใช้ตำแหน่งแบบ absolute */
+    top: 100px; /* ระยะจากด้านบน */
+    right: 80px; /* ระยะจากด้านขวา */
+    border-radius: 10%;
+    display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่งปุ่ม */
+    flex-wrap: wrap; /* ให้ปุ่มเรียงเป็นแถว */
+    align-items: center; /* จัดตำแหน่งปุ่มให้กลางแนวตั้ง */
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .welcomemessage{
+    display:none ;
+  }     
+  .rectangleEXplace{
+    display: none;
+  }
+  .lum{
+    display: none;
+  }
+  .bicycle{
+    display: none;
+  }
+  .lumgroup{
+    display: none;
+  }
+  .bicyclegroup{
+    display: none;
+  }
+  .detailEXplace{
+    display: none;
+  }
+  .HeadEXplace{
+    display: none;
+  }
+
+}
+
+

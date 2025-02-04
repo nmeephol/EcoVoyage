@@ -1,0 +1,641 @@
+/*แถบด้านบน*/
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* สีพื้นหลัง */
+    padding: 10px 20px !important;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+  
+  .navbar .logo {
+    font-size: 30px;
+    font-style: "Roboto", sans-serif;
+    color: #0c2c18; /* สีเขียวของโลโก้ */
+    text-shadow: 1px 1px #a1a4a1;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .navbar .user-icon {
+    font-size: 60px;
+    color: #2b602b;
+    cursor: pointer;
+  }
+  .loginOrRegist {
+    color: #2b602b;
+    text-align: right;
+  }
+  
+  /*test connect to profile.php*/
+  .navbar .UserIcon {
+    height: 30px;
+    width: 30px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px;
+    }
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  body {
+    background-image: url("image/BBG-home.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  .content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin-top: 50px;
+    height: auto;
+  }
+  
+  /*search bar*/
+  .search-section form {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 10px;
+  }
+  
+  input[type="text"] {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  .input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #000; /* Border for input */
+    border-radius: 15px;
+    width: 300px; /* Adjust width as needed */
+    background-color: #ffffff00;
+    padding-left: 40px; /* Add padding to make space for the icon */
+    margin-bottom: 15px; /* Space between inputs if stacked */
+  }
+  
+  /*input field */
+  .input-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+  
+  .input-box img.icon {
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+  }
+  
+  /*filter*/
+  .filters {
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .filter-container {
+    flex: 1;
+    max-width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .filter-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .filter-topic {
+    margin-bottom: 0px;
+    font-size: 18px;
+  }
+  
+  .filter-header img.icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .filter-hoteltype p {
+    margin: 0px;
+    font-size: 16px;
+  }
+  
+  .filter-facilities p {
+    margin: 0px;
+    font-size: 16px;
+  }
+  
+  .toggle {
+    border: 0px;
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+  
+  /*row content*/
+  .container,
+  .content {
+    width: 100%;
+    max-width: 1200px;
+  }
+  .container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .content-card {
+    display: flex;
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    max-width: 800px;
+  }
+  
+  .content-image {
+    width: 300px;
+    max-height: 300px;
+    border-radius: 15px;
+  }
+  
+  .content-info {
+    flex-grow: 1;
+  }
+  
+  .title {
+    display: flex;
+  }
+  
+  /*search button*/
+  .submitbutton {
+    border-radius: 20px;
+    border: solid rgba(21, 53, 30, 1);
+    padding: 12px 22px;
+    background-color: rgba(21, 53, 30, 1);
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /*rating*/
+  .rating {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 10px 10px;
+    background-color: white;
+    box-shadow: 3px 3px 5px #dbdbdb;
+    box-sizing: border-box;
+    padding: 5px;
+    width: fit-content;
+    margin-bottom: 5px;
+  }
+  
+  .rating p {
+    margin: 0px;
+    font-size: 14px;
+  }
+  
+  .rating img {
+    height: 15px;
+  }
+  
+  /*ranking*/
+  .hotelranking {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+  .hotelranking img {
+    width: 50px;
+    height: auto;
+  }
+  .hotelranking p {
+    margin: 0px;
+  }
+  
+  /*้hotel facilities*/
+  .facilities {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .facilities li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .facilities li img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /*price*/
+  .Price {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 0;
+    width: fit-content;
+  }
+  
+  .Price img {
+    height: 15px;
+    width: auto;
+    margin: 1px;
+  }
+  
+  .Price p {
+    margin: 0px;
+    font-size: 14px;
+  }
+  
+  .getPrice {
+    margin-left: 8px;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  .bottom-part {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  /*fav button*/
+  .fav-button {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .fav-button img {
+    height: 30px;
+    width: auto;
+    text-align: center;
+  }
+  
+  .fav-button button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: 3px 3px 5px #dbdbdb;
+  }
+  
+  .opentime {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .opentime img {
+    height: 15px;
+    margin: 0px;
+  }
+  
+  .opentime p {
+    margin: 0px;
+    gap: 0px;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media screen and (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+      padding: 5px 10px !important;
+    }
+  
+    .navbar .logo {
+      font-size: 24px;
+    }
+  
+    /* Content adjustments */
+    .content {
+      padding: 15px;
+      margin-top: 60px;
+    }
+  
+    /* Search section */
+    .search-section form {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .input-box {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* Row layout adjustment */
+    .row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    /* Filter container */
+    .filter-container {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 80vh;
+      background-color: white;
+      z-index: 1001;
+      transition: bottom 0.3s ease-in-out;
+      overflow-y: auto;
+      padding: 20px;
+      border-radius: 20px 20px 0 0;
+    }
+  
+    .filter-container.active {
+      bottom: 0;
+      height: 850px;
+    }
+  
+    /* Overlay background when drawer is open */
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+  
+    .drawer-overlay.active {
+      display: block;
+    }
+  
+    /* Close button for drawer */
+    .drawer-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    /* Filter button to open drawer */
+    .filter-button {
+      display: block; /* Visible by default */
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #15351e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    /* Hide filter-button for tablets and desktops (screens wider than 768px) */
+    @media screen and (min-width: 768px) {
+      .filter-button {
+        display: none;
+      }
+    }
+  
+  
+    /* Content cards */
+    .content-card {
+      flex-direction: column;
+    }
+  
+    .content-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Bottom part adjustments */
+    .bottom-part {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .Price {
+      margin-left: 0;
+      width: 100%;
+    }
+  
+    /* Facilities list */
+    .facilities {
+      gap: 5px;
+    }
+  
+    .facilities li {
+      font-size: 12px;
+      padding: 3px 8px;
+    }
+  
+    /* Rating and buttons */
+    .rating {
+      margin-bottom: 10px;
+    }
+  
+    .fav-button {
+      position: absolute;
+      top: -13px;
+      right: 5px;
+    }
+  
+    /* Container width */
+    .container {
+      padding: 10px;
+    }
+  
+    /* Submit button */
+    .submitbutton {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    /* Title adjustments */
+    .title {
+      position: relative;
+      padding-right: 40px; /* Make space for fav button */
+    }
+  
+    /* Price display */
+    .getPrice {
+      padding: 3px 8px;
+    }
+  
+  
+  
+    /* Overlay background when drawer is open */
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+  
+    .drawer-overlay.active {
+      display: block;
+    }
+  
+    /* Close button for drawer */
+    .drawer-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    /* Filter button to open drawer */
+    .filter-button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #15351e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  /* For mobile screens */
+  @media screen and (max-width: 480px) {
+    .navbar .logo {
+      font-size: 20px;
+    }
+  
+  
+    .facilities li {
+      font-size: 11px;
+    }
+  
+    h3 {
+      font-size: 18px;
+    }
+  
+    h4 {
+      font-size: 16px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  .drawer-buttons {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      background: white;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+  }
+  
+  .btn-cancel, .btn-apply {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      flex: 1;
+  }
+  
+  .btn-cancel {
+      background-color: #f5f5f5;
+      color: #333;
+  }
+  
+  .btn-apply {
+      background-color: #15351e;
+      color: white;
+  }
+  
+  /* Adjust the filter container to make room for buttons */
+  @media screen and (max-width: 768px) {
+      .filter-container {
+          padding-bottom: 80px; /* Make room for the buttons */
+      }
+      
+      .filter-container.active {
+          bottom: 0;
+          height: 85vh; /* Adjust height to prevent content from being hidden behind buttons */
+          display: flex;
+          flex-direction: column;
+      }
+  }
